@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Gudz Starr</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .typing-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #typing-text {
+      font-size: 1.3rem;
+      color: white;
+      text-shadow: 0 0 10px white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero img {
+      width: 180px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 20px white;
+    }
+
+    .hero h1 {
+      margin-top: 20px;
+      font-size: 3rem;
+      color: white;
+    }
+
+    .hero p {
+      color: #aaa;
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .btn-cv {
+      margin-top: 20px;
+      padding: 10px 30px;
+      border: none;
+      background: white;
+      color: #000;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-cv:hover {
+      background: #000;
+      color: white;
+      box-shadow: 0 0 25px white;
+    }
+
+    .social {
+      margin-top: 20px;
+    }
+
+    .social a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: white;
+      text-shadow: 0 0 10px white;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #bbb;
+      font-size: 1.1rem;
+    }
+
+    .skill-bar {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    .skill-name {
+      margin-bottom: 5px;
+    }
+
+    .bar {
+      height: 20px;
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: inset 0 0 5px #203a43;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, black, white);
+      border-radius: 10px;
+      animation: fill 2s ease-out forwards;
+    }
+
+    @keyframes fill {
+      from { width: 0; }
+    }
+
+    .services-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .service-box {
+      background: #111;
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px solid white;
+      box-shadow: 0 0 20px red33f2c;
+      transition: 0.3s;
+      flex: 1 1 250px;
+      max-width: 270px;
+    }
+
+    .service-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00f2ff;
+    }
+
+    .service-box i {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .service-box h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    footer {
+      background-color: #0a0a0a;
+      padding: 20px;
+      color: #444;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid white;
+    }
+
+    .payment-info {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 40px auto;
+    }
+
+    .payment-info h2 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .payment-info p {
+      color: #bbb;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .payment-info .copy-btn {
+      background: white;
+      color: #000;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .payment-info .copy-btn:hover {
+      background: #000;
+      color: red;
+    }
+
+    .qr-code {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .qr-code img {
+      width: 150px;
+      border: 2px solid red;
+      border-radius: 10px;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Typing animation -->
+  <div class="typing-container">
+    <h2 id="typing-text"></h2>
+  </div>
+
+  <div class="hero">
+    <img src="https://files.catbox.moe/tmyqf2.jpg" alt="Avatar"/>
+    <h1>Gudz Starr</h1>
+    <p>Pelajar 16 tahun | Website Developer | Bot Developer</p>
+    <button class="btn-cv" onclick="window.location.href='https://www.mediafire.com/file/xxxxx/Project_Destructive.zip'">Download Project Destructive</button>
+    <div class="social">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="https://youtube.com/alpindevv"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <section class="about">
+    <div class="section-title">Tentang Saya</div>
+    <p>
+      Saya adalah seorang pelajar yang memiliki semangat besar dalam dunia pemrograman web, Khususnya JavaScript, Java, Html, Css, Python, Php, NodeJs. Saya terbiasa membangun antarmuka pengguna yang modern dan juga mengembangkan bot whatsapp.
+    </p>
+  </section>
+
+  <section class="skills">
+    <div class="section-title">Skills</div>
+    <div class="skill-bar">
+      <div class="skill-name">JavaScript - 75%</div>
+      <div class="bar"><div class="bar-fill" style="width: 75%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-name">Java - 30%</div>
+      <div class="bar"><div class="bar-fill" style="width: 30%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-name">Html - 80%</div>
+      <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-name">Css - 80%</div>
+      <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-name">NodeJs - 60%</div>
+      <div class="bar"><div class="bar-fill" style="width: 60%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-name">Php - 40%</div>
+      <div class="bar"><div class="bar-fill" style="width: 40%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <div class="skill-name">Python - 20%</div>
+      <div class="bar"><div class="bar-fill" style="width: 40%"></div></div>
+    </div>
+  </section>
+
+<section class="shop" id="shop">
+  <div class="section-title">Toko Layanan Premium</div>
+  <div class="services-container">
+    <div class="service-box">
+      <i class="fas fa-robot"></i>
+      <h3>Bot WhatsApp</h3>
+      <p>Bot WhatsApp fitur lengkap, auto-reply, push VCF, downloader sosmed, dan masih banyak lagi.</p>
+      <a href="https://wa.me/62882003862744?text=Halo%20Alpin%2C%20saya%20ingin%20beli%20Bot%20WhatsApp%20Premium" target="_blank">
+        <button class="btn-cv">Beli Sekarang</button>
+      </a>
+    </div>
+    <div class="service-box">
+      <i class="fas fa-server"></i>
+      <h3>Aplikasi Premim</h3>
+      <p>Alight Motion, Youtube, Spotity dan ada banyak lagi ,tinggal sebut yang lu minat, Sampai bertemu di WhatsApp.</p>
+      <a href="https://wa.me/62882003862744?text=Halo%20Alpin%2C%20saya%20ingin%20order%20Website%20Custom%20Premium" target="_blank">
+        <button class="btn-cv">Beli Sekarang</button>
+      </a>
+    </div>
+    <div class="service-box">
+      <i class="fas fa-paper-plane"></i>
+      <h3>Bot Telegram</h3>
+      <p>Bot Telegram auto command, fitur admin, API integrasi, dan sistem custom lainnya.</p>
+      <a href="https://wa.me/62882003862744?text=Halo%20Alpin%2C%20saya%20tertarik%20dengan%20Bot%20Telegram%20Premium" target="_blank">
+        <button class="btn-cv">Beli Sekarang</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <section class="payment-info">
+    <h2>Payment Information</h2>
+    <p>Silakan lakukan pembayaran melalui salah satu metode berikut:</p>
+    <p><strong>Nomor DANA:</strong> 0882003862744</p>
+    <button class="copy-btn" onclick="copyToClipboard('0882003862744')">Copy DANA Number</button>
+    <p><strong>Nomor OVO:</strong> 0882003862744</p>
+    <button class="copy-btn" onclick="copyToClipboard('0882003862744')">Copy OVO Number</button>
+    <p><strong>Nomor GoPay:</strong> 0882003862744</p>
+    <button class="copy-btn" onclick="copyToClipboard('0882003862744')">Copy GoPay Number</button>
+    <div class="qr-code">
+      <a href="https://files.catbox.moe/o1bsot.jpg" download><img src="https://files.catbox.moe/nlks1z.jpg" alt="QR Code"></a>
+      <p>Click to download QR Code</p>
+    </div>
+  </section>
+
+  <footer>
+    Gudz Starr Portofolio
+  </footer>
+
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/d0m5np.mp4" type="audio/mp3">
+  </audio>
+
+  <script>
+    // Copy to clipboard
+    function copyToClipboard(text) {
+      const el = document.createElement('textarea');
+      el.value = text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    }
+
+    // Typing animation
+    const texts = [
+      "Selamat berkunjung di website Gudz Starr",
+      "Silahkan baca secara perlahan..."
+    ];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+    let isDeleting = false;
+    let delay = 80;
+
+    function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      if (isDeleting) {
+        letter = currentText.slice(0, --index);
+      } else {
+        letter = currentText.slice(0, ++index);
+      }
+
+      document.getElementById('typing-text').textContent = letter;
+
+      if (!isDeleting && index === currentText.length) {
+        isDeleting = true;
+        delay = 2000;
+      } else if (isDeleting && index === 0) {
+        isDeleting = false;
+        count++;
+        delay = 500;
+      } else {
+        delay = isDeleting ? 30 : 80;
+      }
+
+      setTimeout(type, delay);
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+</body>
+</html>
